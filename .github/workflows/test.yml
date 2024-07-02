@@ -1,0 +1,49 @@
+name: test
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  install:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Git
+        uses: Homebrew/actions/git-user-config@master
+
+      # This action automatically installs the locally checked out tap.
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check the CLI formula
+        run: |
+          brew style hckr
+
+      - name: Install CLI
+        run: |
+          brew install hckr
+
+      - name: Test CLI
+        run: |
+          brew test hckr
+
+      - name: Run CLI
+        run: |
+          hckr version
