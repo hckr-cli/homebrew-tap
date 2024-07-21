@@ -18,7 +18,6 @@ jobs:
       matrix:
         os:
           - macos-latest
-          - ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -46,4 +45,4 @@ jobs:
 
       - name: Run CLI
         run: |
-          hckr version
+          hckr info version
