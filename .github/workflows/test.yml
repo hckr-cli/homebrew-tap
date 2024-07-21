@@ -45,4 +45,4 @@ jobs:
 
       - name: Run CLI
         run: |
-          hckr version
+          hckr info version
