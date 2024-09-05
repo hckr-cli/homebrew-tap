@@ -43,6 +43,16 @@ jobs:
         run: |
           brew test hckr
 
-      - name: Run CLI
+      - name: Run info disk
         run: |
-          hckr info version
+          hckr info disk
+
+      - name: Run info java
+        run: |
+          hckr info java
+
+      - name: Run info python
+        run: |
+          hckr info python
+          
+          

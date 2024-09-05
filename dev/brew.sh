@@ -43,7 +43,7 @@ function style(){
 
 CMD=$1
 
-COMMANDS="\n==========================\ntest - Run brew test \ninstall - Install from sources\nuninstall- Uninstall hckr\nclean - Clean cache\ntap - Create tap from latest sources\naudit - Run brew audit\nstyle - Run brew style"
+COMMANDS="\n==========================\ntest - Run brew test \ninstall - Install from sources\nuninstall- Uninstall hckr\nclean - Clean cache\checks - Run all tests"
 
 if [ -z $CMD ]; then
     echo -e "Please pass COMMAND, Please use $COMMANDS"
@@ -66,7 +66,7 @@ checks) # run all checks
   style
   ;;
 *)
-  echo -e "Invalid command, Please use $COMMANDS"
+  echo -e "Invalid command '$CMD', Please use $COMMANDS"
   exit 1
 esac
 

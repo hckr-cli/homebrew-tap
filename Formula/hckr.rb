@@ -3,8 +3,8 @@ class Hckr < Formula
 
   desc "Awesome CLI hack for developers"
   homepage "https://pypi.org/project/hckr/"
-  url "https://files.pythonhosted.org/packages/ee/20/202a47fce08644cba4925241afd09d94dace0ae09c464bf9053985b08757/hckr-0.3.0.tar.gz"
-  sha256 "920ed99a82f1f3b6deb6f4cc54147e45d226be9a0d8d5a0a202b27f2acfd2dbc"
+  url "https://files.pythonhosted.org/packages/38/39/c411253dcdd76aeede04c3e91fa95c155629f48462ea631710aa80bca8cb/hckr-0.4.0.tar.gz"
+  sha256 "d73a3c9aa1a1f5b66979bbd58754d0218b9c28652600689bd2d71660b59d70d5"
   license "MIT"
   depends_on "python@3.12"
 
